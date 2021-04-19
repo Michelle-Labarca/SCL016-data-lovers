@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 body    {
     background-color: #A2F2D2;
+    font-family: 'Abel', sans-serif;
 }
 
-.pokemon    {
+.pokeHeader    {
     width: 100%;
     height: 180px;
 }
@@ -24,7 +26,7 @@ body    {
     height: 45px;
     border-radius: 12px;
     border: 1px solid #A2F2D2;
-    font-family: Abel, FontAwesome;
+    font-family: "abel", FontAwesome;
     font-size: 16px;
     text-align-last: center;
     
@@ -34,7 +36,62 @@ body    {
     vertical-align: middle;
 }
 
-
 select  {
     background-color: #60F194;
 }
+
+/*  vista pokemones */
+
+.pokeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1400px;
+
+}
+
+.pokemon {
+	background-color: white;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+	border-radius: 50px;
+	margin: 20px;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon .img-container {
+    width: 85%;
+    height: 85%;
+    text-align: center;
+    
+}
+
+.pokemon .img-container img {
+	margin-top: 10px;
+	max-width: 75%;
+}
+
+.pokemon .info {
+	margin-top: 0px;
+}
+
+.pokemon .name {
+	letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -25px;
+}
+
+.pokemon .number {
+	border-radius: 10px;
+	font-size: 16px;
+	text-align: center;
+    margin-top: -10px;
+}
+
