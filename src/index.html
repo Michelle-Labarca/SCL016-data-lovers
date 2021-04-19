@@ -2,11 +2,59 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers Pokemon 2</title>
+    <title>Data Lovers Pokemon</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/5c7e8a19bc.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <header>
+      <div>
+        <img class= "pokemon" src="img/FondoPokemon.png">
+      </div>
+      <nave class="contenedor">    
+        <div class="">   
+        <img class= "icon"  src="img/Botones/Icono Buscador.png">         
+        <input class= "botton "type="search" placeholder="Buscar por nombre">
+        </div>
+        <div class="choice">
+        <img class="icon" src="img/Botones/Icono Tipo.png">
+        <select id="tipe" class="botton">  
+              <option value="">TIPO</option>
+              <option value="">Normal</option>
+              <option value="">Fuego</option>
+              <option value="">Agua</option>
+              <option value="">Planta</option>
+              <option value="">Electrico</option> 
+        </select>
+        </div>
+        <div class="choice">
+        <img class="icon" src="img/Botones/ataque.png">
+        <select id="move" class="botton">
+            <option value="">MOVIMIENTO/ATAQUE</option>
+            <option value="">Normal</option>
+            <option value="">Fuego</option>
+            <option value="">Agua</option>
+            <option value="">Planta</option>
+            <option value="">Electrico</option>
+        </select>
+        </div>
+        <div class="choice">
+        <img class="icon" src="img/Botones/Icono Debilidades.png">
+        <select id="debility" class="botton">
+            <option value="">DEBILIDADES</option>
+            <option value="">Normal</option>
+            <option value="">Fuego</option>
+            <option value="">Agua</option>
+            <option value="">Planta</option>
+            <option value="">Electrico</option>
+        </select>
+        </div>         
+      </nave>  
+    </header>
+    <main>
+      <div id="root"></div>
+    </main>
     <script src="main.js" type="module"></script>
   </body>
 </html>
