@@ -8,15 +8,16 @@
   </head>
   <body>
     <header>
-      <div>
+      <section>
         <img class= "pokeHeader" src="img/FondoPokemon.png">
-      </div>
-      <nave class="contenedor">    
-        <div>   
+      </section>
+    </header>
+    <nave class="contenedor">    
+      <section>   
         <img class= "icon"  src="img/Botones/Icono Buscador.png">         
         <input class= "botton "type="search" placeholder="&#xf002;   Buscar por nombre">
-        </div>
-        <div class="choice">
+      </section>
+      <section class="choice">
         <img class="icon" src="img/Botones/Icono Tipo.png">
         <select id="tipe" class="botton">  
               <option value="">TIPO</option>
@@ -26,8 +27,8 @@
               <option value="">Planta</option>
               <option value="">Electrico</option> 
         </select>
-        </div>
-        <div class="choice">
+      </section>
+      <section class="choice">
         <img class="icon" src="img/Botones/ataque.png">
         <select id="move" class="botton">
             <option value="">MOVIMIENTO/ATAQUE</option>
@@ -37,8 +38,8 @@
             <option value="">Planta</option>
             <option value="">Electrico</option>
         </select>
-        </div>
-        <div class="choice">
+      </section>
+      <section class="choice">
         <img class="icon" src="img/Botones/Icono Debilidades.png">
         <select id="debility" class="botton">
             <option value="">DEBILIDADES</option>
@@ -48,12 +49,11 @@
             <option value="">Planta</option>
             <option value="">Electrico</option>
         </select>
-        </div>         
-      </nave>  
-    </header>
+      </section>         
+    </nave>  
     <main>
-      <div id="pokeContainer" class="pokeContainer">   
-      </div>
+      <section id="pokeContainer" class="pokeContainer">       
+      </section>
     </main>
     <script src="main.js" type="module"></script>
   </body>
