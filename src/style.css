@@ -15,6 +15,7 @@ body    {
     flex-direction: row;
     justify-content: center;
     margin-top: 15px;
+    letter-spacing: 10px;
 }
 
 .choice {
@@ -29,6 +30,7 @@ body    {
     font-family: "abel", FontAwesome;
     font-size: 16px;
     text-align-last: center;
+    cursor: pointer;
     
 }
 
@@ -48,10 +50,9 @@ select  {
     justify-content: center;
     margin: 0 auto;
     max-width: 1400px;
-
 }
 
-.pokemon {
+.poke {
 	background-color: white;
     box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
 	border-radius: 50px;
@@ -64,34 +65,30 @@ select  {
     justify-content: center;
 }
 
-.pokemon .img-container {
+.poke .img-container {
     width: 85%;
     height: 85%;
     text-align: center;
-    
+    cursor: pointer;
 }
 
-.pokemon .img-container img {
-	margin-top: 10px;
+.poke .img-container img {
+	margin-top: 5px;
 	max-width: 75%;
 }
 
-.pokemon .info {
+.poke .info {
 	margin-top: 0px;
-}
-
-.pokemon .name {
-	letter-spacing: 1px;
+    text-align: center;
     font-size: 16px;
     font-weight: bold;
-    text-align: center;
-    margin-top: -25px;
+    letter-spacing: 1px; 
 }
 
-.pokemon .number {
-	border-radius: 10px;
-	font-size: 16px;
-	text-align: center;
+.poke .name {
+    margin-top: -30px;
+}
+
+.poke .number {
     margin-top: -10px;
 }
-
