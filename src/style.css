@@ -2,7 +2,6 @@
 
 body    {
     background-color: #A2F2D2;
-    font-family: 'Abel', sans-serif;
 }
 
 .pokeHeader    {
@@ -18,7 +17,7 @@ body    {
     letter-spacing: 10px;
 }
 
-.choice {
+.bottonSelect {
     margin-left: 35px;
 }
 
@@ -27,8 +26,8 @@ body    {
     height: 45px;
     border-radius: 12px;
     border: 1px solid #A2F2D2;
-    font-family: "abel", FontAwesome;
-    font-size: 16px;
+    font-family: 'Abel', sans-serif, FontAwesome;
+    font-size: 16px; 
     text-align-last: center;
     cursor: pointer;
     
@@ -80,6 +79,7 @@ select  {
 .poke .info {
 	margin-top: 0px;
     text-align: center;
+    font-family: 'Abel', sans-serif, FontAwesome;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px; 

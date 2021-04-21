@@ -1,11 +1,11 @@
-//import { getPokemonByFilter } from './data.js';
+import { filtrarPorTipo, filtrarPorDebilidad } from './data.js';
 import data from "./data/pokemon/pokemon.js";
 
 //Obtenemos el elemento poke-Container desde html
 const pokeContainer = document.getElementById("poke-Container");
 
-//Creamos la funcion que crea las pokemonCard
-function createPokemonCard(poke) {
+//Creamos la funcion que crea las Box
+function createPokemonBox(poke) {
 
     //Dentro de mi pokemonBox crea una section con class="poke"
 	const pokemonBox = document.createElement("section");
@@ -38,22 +38,53 @@ function createPokemonCard(poke) {
 
 //Creo la funcion para llenar con los pokemon las pokemonBox
 function fillContainer(dataPoke){
-/*Por cada pokemon de la data, voy a llamar a la funcion 
-creada anteriormente(createPokemonCard)*/
-    dataPoke.forEach(pokeSelect => {
-        createPokemonCard(pokeSelect);
-    })
+    //Por cada pokemon de la data voy a crear su propia box
+        dataPoke.forEach(pokeSelect => {
+            createPokemonBox(pokeSelect);
+        })
+    }
 
-}
 //llamo a la funcion de fillContainer y le paso la data de los pokemon
 fillContainer(data.pokemon);
 
-//Funcion tarjeta pokemon//
+//Creo una constante para para guardar el selector de tipos
+const typeSelect = document.getElementById("type");
+//Creo un evento que se ejecuta cuando el selector cambie
+typeSelect.addEventListener("change", () => {
+    //Vacio el elemento poke-container(padre)
+    const node = document.getElementById("poke-Container");
+    node.innerHTML = "";
+    //Obtengo el valor del selector
+    const tipo = typeSelect.value;
+    //Obtenemos la lista de pokemones filtrados de acuerdo al valor seleccionado
+    let pokemones_filtrados = filtrarPorTipo(data.pokemon,tipo);
+    //Por cada pokemon filtrado vamos a crear su respectiva box
+    pokemones_filtrados.forEach(pokeSelect => {
+        createPokemonBox(pokeSelect);
+    });
+});
+
+const weaknessesSelect = document.getElementById("debility");
+weaknessesSelect.addEventListener("change", () => {
+    const node = document.getElementById("poke-Container");
+    node.innerHTML = "";
+    const debilidad = weaknessesSelect.value;
+    let pokemones_filtrados = filtrarPorDebilidad(data.pokemon,debilidad);
+    pokemones_filtrados.forEach(pokeSelect => {
+        createPokemonBox(pokeSelect);
+    });
+})
+
+
+
+
+/*Funcion tarjeta pokemon
 
 const allPokeCard = document.getElementById("poke-Container").childNodes;
 allPokeCard.forEach(function(childCard, i) {
     //console.log(card);
     childCard.onclick = function() {
+    // eslint-disable-next-line no-console
     console.log(data.pokemon[i-1]);
 
-}});
+}});*/
