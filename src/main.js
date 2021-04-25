@@ -73,10 +73,12 @@ weaknessesSelect.addEventListener("change", () => {
     pokemones_filtrados.forEach(pokeSelect => {
         createPokemonBox(pokeSelect);
     });
-})
+});
 
-
-
+/* Testeo busqueda por nombre
+const pokemonTest = test(data.pokemon,"pik");
+console.log(pokemonTest);
+*/
 
 /*Funcion tarjeta pokemon
 

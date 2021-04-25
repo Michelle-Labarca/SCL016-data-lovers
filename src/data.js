@@ -19,3 +19,11 @@ export const filtrarPorDebilidad = (allPokemon,debilidad) => {
   }
   return pokemonFiltrados;
 }
+
+/* Testeo busqueda por nombre
+export const test = (allPokemon,name) => {
+  let pokemonFiltrados = allPokemon.filter(
+    pokemon => pokemon.name.startsWith(name) > -1,
+  );
+  return pokemonFiltrados;
+}*/
